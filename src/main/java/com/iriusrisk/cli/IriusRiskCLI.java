@@ -2,11 +2,12 @@ package com.iriusrisk.cli;
 
 import picocli.CommandLine;
 
-@CommandLine.Command(
+@CommandLine.Command(name = "irius", mixinStandardHelpOptions = true,
         subcommands = {
-                ProductsCommand.class
-        }
-)
+            ListCommand.class,
+            ShowCommand.class,
+            CommandLine.HelpCommand.class
+        }, description = "Interact with threat models on IriusRisk")
 public class IriusRiskCLI implements Runnable {
     @CommandLine.Spec
     CommandLine.Model.CommandSpec spec;
@@ -22,7 +23,7 @@ public class IriusRiskCLI implements Runnable {
 
     @Override
     public void run() {
-        throw new CommandLine.ParameterException(spec.commandLine(), "Specify a subcommand");
+        spec.commandLine().usage(System.out);
     }
 
     public static void main(String[] args) {
