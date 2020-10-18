@@ -1,5 +1,6 @@
 package com.iriusrisk.cli;
 
+import com.iriusrisk.cli.client.IriusApiClient;
 import picocli.CommandLine;
 
 @CommandLine.Command(name = "irius", mixinStandardHelpOptions = true,
@@ -11,6 +12,9 @@ import picocli.CommandLine;
 public class IriusRiskCLI implements Runnable {
     @CommandLine.Spec
     CommandLine.Model.CommandSpec spec;
+
+    public IriusRiskCLI() {
+    }
 
     private int executionStrategy(CommandLine.ParseResult parseResult) {
         init(); // custom initialization to be done before executing any command or subcommand

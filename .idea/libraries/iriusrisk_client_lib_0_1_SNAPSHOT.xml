@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="iriusrisk-client-lib-0.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/resources/iriusrisk-client-lib-0.1-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
